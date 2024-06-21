@@ -1,3 +1,4 @@
+import theme from "@/themes/theme";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
@@ -7,7 +8,7 @@ const Navbar = () => {
     <AppBar
       style={{
         height: "66px",
-        background: "#FFFFFF",
+        background: theme.palette.common.white,
       }}
     >
       <Toolbar>

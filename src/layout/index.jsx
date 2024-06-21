@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Sidebar from "@/components/Sidebar";
+import theme from "@/themes/theme";
 import { Box, CssBaseline, Stack } from "@mui/material";
 
 // eslint-disable-next-line react/prop-types
@@ -21,7 +22,7 @@ const MainLayout = ({ children }) => {
             p: 3,
             height: "100vh",
             width: "100%",
-            background: "#A3AED0",
+            background: theme.palette.background.rockBlue,
             paddingTop: "60px",
             paddingLeft: "130px",
           }}
