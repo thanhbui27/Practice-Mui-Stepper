@@ -16,13 +16,13 @@ const theme = createTheme({
       main: systemColor.selago,
     },
     text: {
-      rockBlue: systemColor.rockBlue,
-      grey: systemColor.grey,
+      light: systemColor.silver,
+      main: systemColor.grey,
+      dark: systemColor.cornflowerBlue,
+      secondary: systemColor.rockBlue,
     },
     background: {
-      alabaster: systemColor.alabaster,
-      selago: systemColor.selago,
-      rockBlue: systemColor.rockBlue,
+      default: systemColor.rockBlue,
     },
   },
 });

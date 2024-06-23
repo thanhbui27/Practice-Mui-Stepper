@@ -1,9 +1,13 @@
-import Navbar from "@/components/Navbar";
-import Sidebar from "@/components/Sidebar";
-import theme from "@/themes/theme";
+//prop-types
+import PropTypes from "prop-types";
+
+//Library
 import { Box, CssBaseline, Stack } from "@mui/material";
 
-// eslint-disable-next-line react/prop-types
+//components
+import Navbar from "@/components/Navbar";
+import Sidebar from "@/components/Sidebar";
+
 const MainLayout = ({ children }) => {
   return (
     <Box>
@@ -14,17 +18,17 @@ const MainLayout = ({ children }) => {
         alignItems="center"
         spacing={3}
         justifyContent="center"
+        mr={5}
       >
         <Sidebar />
         <Box
           component="main"
           sx={{
-            p: 3,
             height: "100vh",
-            width: "100%",
-            background: theme.palette.background.rockBlue,
-            paddingTop: "60px",
-            paddingLeft: "130px",
+            width: 1,
+            bgcolor: "background",
+            pt: 7,
+            pl: 15,
           }}
         >
           {children}
@@ -32,6 +36,10 @@ const MainLayout = ({ children }) => {
       </Stack>
     </Box>
   );
+};
+
+MainLayout.propTypes = {
+  children: PropTypes.any,
 };
 
 export default MainLayout;
