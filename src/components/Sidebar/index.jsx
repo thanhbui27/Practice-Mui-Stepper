@@ -6,7 +6,7 @@ import { Avatar, Drawer, List, ListItem, ListItemAvatar } from "@mui/material";
 
 const Sidebar = () => {
   return (
-    <Drawer variant="permanent" width={68}>
+    <Drawer variant="permanent">
       <List>
         {MOCK_IMAGE_ICON_SIDEBAR.map((item) => (
           <ListItem key={item.id}>
