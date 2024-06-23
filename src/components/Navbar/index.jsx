@@ -1,18 +1,18 @@
-import theme from "@/themes/theme";
-import AppBar from "@mui/material/AppBar";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
+import { AppBar, Toolbar, Typography } from "@mui/material";
+
+import MyThemeComponent from "./style";
 
 const Navbar = () => {
   return (
-    <AppBar
-      style={{
-        height: "66px",
-        background: theme.palette.common.white,
-      }}
-    >
+    <AppBar sx={{ height: 66, bgcolor: "primary.main" }}>
       <Toolbar>
         <Typography variant="h6">Admin Dashboard</Typography>
+        <MyThemeComponent sx={{ m: 1 }} color="primary" variant="dashed">
+          Primary
+        </MyThemeComponent>
+        <MyThemeComponent sx={{ m: 1 }} color="secondary">
+          Primary
+        </MyThemeComponent>
       </Toolbar>
     </AppBar>
   );

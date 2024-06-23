@@ -1,7 +1,7 @@
 import { createTheme } from "@mui/material";
 import { systemColor } from "./color";
 
-const theme = createTheme({
+const customTheme = createTheme({
   palette: {
     primary: {
       main: systemColor.azureRadiance,
@@ -16,15 +16,49 @@ const theme = createTheme({
       main: systemColor.selago,
     },
     text: {
-      rockBlue: systemColor.rockBlue,
-      grey: systemColor.grey,
+      main: systemColor.rockBlue,
+      dark: systemColor.grey,
     },
     background: {
-      alabaster: systemColor.alabaster,
-      selago: systemColor.selago,
-      rockBlue: systemColor.rockBlue,
+      main: systemColor.alabaster,
+      light: systemColor.selago,
+      dark: systemColor.rockBlue,
     },
+  },
+  components: {
+    // Custom a new component
+    MyThemeComponent: {
+      styleOverrides: {
+        root: {
+          color: "darkslategray",
+        },
+        primary: {
+          color: "darkblue",
+        },
+        secondary: {
+          color: "darkred",
+          backgroundColor: "pink",
+        },
+      },
+      variants: [
+        {
+          props: { variant: "dashed", color: "primary" },
+          style: {
+            border: "1px dashed darkblue",
+          },
+        },
+        {
+          props: { variant: "dashed", color: "secondary" },
+          style: {
+            border: "1px dashed darkred",
+          },
+        },
+      ],
+    },
+
+    // Custom a built in component
+    MuiButton: {},
   },
 });
 
-export default theme;
+export default customTheme;
