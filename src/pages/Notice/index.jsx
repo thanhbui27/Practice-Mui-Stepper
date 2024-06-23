@@ -1,3 +1,4 @@
+//component layout
 import MainLayout from "@/layout";
 
 const Notice = () => {

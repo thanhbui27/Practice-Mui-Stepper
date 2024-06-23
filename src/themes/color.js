@@ -8,5 +8,6 @@ export const systemColor = {
   limeade: "#70c702",
   selago: "#f4f7fe",
   azureRadiance: "#007bff",
-  emperor : "#555555"
+  emperor: "#555555",
+  cornflowerBlue: "#6195ed",
 };
